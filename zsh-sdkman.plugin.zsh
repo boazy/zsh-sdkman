@@ -112,6 +112,7 @@ if [[ -f "${ZSH_SDKMAN_VERSION_FILE}" ]]; then
     # Rebuild completion
     0=${(%):-%N}
     fpath=(${0:A:h} $fpath)
+    # Compinit needs to be run somewhere else
     autoload -U compinit && compinit -C
 fi
 
